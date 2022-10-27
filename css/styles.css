@@ -38,6 +38,10 @@ body {
 
 .link {
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
@@ -61,10 +65,12 @@ header {
   display: flex;
   align-items: center;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
 }
+
 /* логотип */
 .logo {
   font-family: Raleway;
@@ -93,8 +99,12 @@ header {
 
 .site-nav .link {
   display: block;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--basic-color);
   font-weight: 500;
@@ -132,7 +142,11 @@ header {
 
 .icon-auth-nav {
   margin-right: 10px;
+
   fill: var(--description-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .item + .item {
@@ -146,26 +160,20 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--description-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
-.link:focus,
-.link:hover .icon-auth-nav,
-.link:focus .icon-auth-nav {
+.link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* общие эфекты ховера и фокуса. кнопки */
-.site-nav .link:hover,
-.site-nav .link:focus,
-.footer-contact:hover,
-.footer-contact:focus {
-  color: var(--accent-color);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.link:hover .icon-auth-nav,
+.link:focus .icon-auth-nav {
+  fill: var(--accent-color);
 }
 
 .hero-button {
@@ -198,16 +206,18 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--basic-color);
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
 .filters-button:focus {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--main-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auto {
@@ -331,7 +341,7 @@ header {
   position: relative;
 }
 
-.products-list div {
+.products-desc {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -416,20 +426,26 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-socseti {
   fill: var(--basic-icon);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-socseti:hover,
-.box-socseti:focus,
-.box-socseti:hover .icon-socseti,
-.box-socseti:focus .icon-socseti {
-  fill: var(--second-basic);
-  background: var(--accent-color);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.box-socseti:focus {
+  background-color: var(--accent-color);
+}
+
+.team-socseti:hover .icon-socseti {
+  fill: var(--main-color);
 }
 
 /* <!-- постоянные клиенты --> */
@@ -460,10 +476,17 @@ header {
   height: 92px;
   border: 1px solid var(--basic-icon);
   border-radius: 3px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-clients {
   fill: var(--basic-icon);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-sites:hover,
@@ -472,9 +495,6 @@ header {
 .clients-sites:focus .icon-clients {
   border-color: var(--accent-color);
   fill: var(--accent-color);
-
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* <!-- подвал-футер --> */
@@ -492,6 +512,7 @@ header {
 .list-address {
   display: flex;
   flex-direction: column;
+  width: 231px;
   margin-top: 20px;
 
   font-style: normal;
@@ -515,8 +536,13 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* <!-- присоеденяйтесь --> */
 .join-aside {
   margin-left: 70px;
 }
@@ -527,7 +553,6 @@ header {
 
   color: var(--second-basic);
   font-size: 14px;
-  line-height: 16px;
 }
 
 .join-list {
@@ -603,19 +628,19 @@ header {
   padding: 63px 24px;
   opacity: 0;
 
-  transition-duration: 200ms;
+  transition-property: opacity, top;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.link-portfolio:hover {
+.link-portfolio:hover,
+.link-portfolio:focus {
   display: block;
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .paragraph-hidden p {
@@ -626,22 +651,13 @@ header {
   margin: 0;
 }
 
-.link-portfolio:hover .paragraph-hidden {
+.link-portfolio:hover .paragraph-hidden,
+.link-portfolio:focus .paragraph-hidden {
   opacity: 1;
   top: 0;
 }
 
 /* модальное окно */
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-
-  transform: scale(50%);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .backdrob {
   position: fixed;
   left: 0;
@@ -649,10 +665,18 @@ header {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
 
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrob.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrob.is-hidden .modal {
+  transform: scale(0.5);
 }
 
 .modal {
@@ -669,7 +693,10 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: scale(100%);
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button {
